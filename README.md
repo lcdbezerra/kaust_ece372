@@ -28,15 +28,16 @@
     cd ..
     ```
 
-- Make sure the environment is set up properly. The following block should run without errors
+- Make sure the environment is set up properly. Launch Python and try the following block. It should open a window and run without errors
 
     ```
     import gym
     import gym_maze
-    env = gym.make("")
+    env = gym.make("maze-random-10x10-v0")
     obs = env.reset()
     act = env.action_space.sample()
     obs = env.step(act)
+    env.render()
     ```
 
 - Clone and install the `gym-pybullet-drones` environment
@@ -50,4 +51,11 @@
 
 - Make sure the `gym-pybullet-drones` environment is set up properly. The following line should run without errors
 
-    `python gym-pybullet-drones/gym-pybullet-drones/examples/pid.py`
+    `python gym-pybullet-drones/gym_pybullet_drones/examples/pid.py`
+
+- If you are unlucky and the above line doesn't work, run the following command and try again
+
+    ```
+    sudo apt install build-essential
+    conda install -c conda-forge gcc=12.1.0
+    ```

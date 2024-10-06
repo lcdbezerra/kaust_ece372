@@ -1,2 +1,53 @@
-# kaust_ece372
-ECE372 Course Material
+## ECE 372 - Dynamic Programming and Optimal Control
+
+### Setup
+
+- First install [miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation). Follow the steps corresponding to your operating system.
+- Create a `conda` environment for this course. This will be useful to separate packages required in the course from any others and avoid version conflicts.
+
+    `conda create --name ece372 -y python=3.10`
+
+- Activate the environment you just created. You need to do this every time you open a terminal to run the course scripts.
+
+    `conda activate ece372`
+
+- Create a folder for the course and enter it
+
+    `cd PATH_TO_FOLDER` <- change it here
+
+- Clone this repository
+
+    `git clone https://github.com/lcdbezerra/kaust_ece372.git`
+
+- Clone and install the `gym-maze` environment
+
+    ```
+    git clone https://github.com/lcdbezerra/gym-maze.git
+    cd gym-maze
+    pip install -e .
+    cd ..
+    ```
+
+- Make sure the environment is set up properly. The following block should run without errors
+
+    ```
+    import gym
+    import gym_maze
+    env = gym.make("")
+    obs = env.reset()
+    act = env.action_space.sample()
+    obs = env.step(act)
+    ```
+
+- Clone and install the `gym-pybullet-drones` environment
+
+    ```
+    git clone https://github.com/lcdbezerra/gym-pybullet-drones.git
+    cd gym-pybullet-drones
+    pip install -e .
+    cd ..
+    ```
+
+- Make sure the `gym-pybullet-drones` environment is set up properly. The following line should run without errors
+
+    `python gym-pybullet-drones/gym-pybullet-drones/examples/pid.py`

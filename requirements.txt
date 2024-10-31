@@ -1,0 +1,2 @@
+gymnasium==0.28.1
+shimmy==1.3.0

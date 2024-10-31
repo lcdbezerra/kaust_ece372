@@ -15,9 +15,12 @@
 
     `cd PATH_TO_FOLDER` <- change it here
 
-- Clone this repository
+- Clone this repository and install its packages (including Gymnasium)
 
-    `git clone https://github.com/lcdbezerra/kaust_ece372.git`
+    ```
+    git clone https://github.com/lcdbezerra/kaust_ece372.git
+    pip install -r kaust_ece372/requirements.txt
+    ```
 
 - Clone and install the `gym-maze` environment
 
